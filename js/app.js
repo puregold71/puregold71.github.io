@@ -66,6 +66,17 @@ class Heart {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y)
   }
 }
+class Boy {
+  constructor(x, y) {
+    this.x = x
+    this.y = y;
+    this.sprite = 'images/char-boy.png'
+  }
+  render(){
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y)
+  }
+}
+
 
 class Player {
   //set default values for x, y coordinates of player
@@ -73,6 +84,7 @@ class Player {
   this.x = x;
   this.y = y;
   this.sprite = 'images/char-pink-girl.png';
+
 }
   //draw player on the screen
   render() {
@@ -165,6 +177,11 @@ class Player {
       for(let enemy of allEnemies) {
         enemy.speed = 0;
       }
+      player.x = 201;
+      player.y = 390;
+      boy.x = player.x + 50;
+      boy.y = player.y;
+
       //stop movement of player
     document.removeEventListener('keydown', presskey)
 
@@ -218,6 +235,7 @@ class Player {
   const allEnemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6]
   // Place the player object in a variable called player
   const player = new Player();
+  const boy = new Boy(-100,500)
   //instantiate heart objects
   const heart1 = new Heart(1, -10);
   const heart2 = new Heart(101, -10);
