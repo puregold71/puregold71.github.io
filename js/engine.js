@@ -159,6 +159,7 @@ var Engine = (function(global) {
           heart.render();
         });
         player.render();
+        boy.render();
 
     }
 
@@ -200,6 +201,9 @@ var Engine = (function(global) {
       enemy4.speed = Math.floor(Math.random() * 100) ;
       enemy5.speed = enemy4.speed;
 
+      boy.x = -100;
+      boy.y = -100;
+      
     }
 //trigger reset on button click
 button.addEventListener('click', reset);
@@ -214,7 +218,8 @@ button.addEventListener('click', reset);
         'images/grass-block.png',
         'images/enemy-bug.png',
         'images/char-pink-girl.png',
-        'images/Heart.png'
+        'images/Heart.png',
+        'images/char-boy.png'
     ]);
     Resources.onReady(init);
 
