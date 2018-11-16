@@ -1,0 +1,77 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+    text-align: center;
+    background-image: linear-gradient(#0033cc, lightgrey, green);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+h1 {
+  margin: 50px 0 0 0;
+  color: white;
+  font-family: 'Bungee Shade', cursive;
+  text-shadow: 2px 4px 3px #000;
+}
+p {
+  font-size: 28px;
+  font-family: 'Gugi', cursive;
+  margin-bottom: 0;
+
+}
+
+
+.win {
+  text-transform: uppercase;
+  animation: win 1s ease-out 3;
+  animation-fill-mode: forwards;
+}
+@keyframes win {
+    0% {
+        font-size: 30px;
+        color: #000;
+    }
+
+    25% {
+        font-size: 58px;
+        color: lightgrey
+    }
+    50% {
+        font-size: 78px;
+        color: #0033cc;
+    }
+    75% {
+        font-size: 58px;
+        color: lightgrey;
+    }
+
+    100% {
+        font-size: 30px;
+        color: #000;
+    }
+}
+
+button {
+  display: none;
+  height: 40px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #fff;
+  margin: 20px auto 0 auto;
+}
+
+.red {
+  animation: hit 100ms;
+
+}
+@keyframes hit {
+  0% {
+    background-image: linear-gradient(red, red, red);
+  }
+  100% {
+    background-image: linear-gradient(#0033cc, lightgrey, green);
+  }
+}
